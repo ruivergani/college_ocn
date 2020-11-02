@@ -1,0 +1,712 @@
+/* Import of Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo&display=swap');
+  @font-face{
+    src: url(../fonts/MeriendaOne.ttf);
+    font-family: 'fontemerienda'; 
+  }
+  @font-face{
+    src: url(..//fonts/OpenSans.ttf);
+    font-family: 'fonteopenSans'; 
+  }
+  @font-face{
+    src: url(../fonts/SourceSansPro.ttf);
+    font-family: 'fontesansPro'; 
+  }
+  
+  /*=========== RESET ==========*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    border: none;
+    outline: none; 
+    font-weight: 300;
+    box-sizing: border-box;
+    font-family: 'Archivo', sans-serif;
+    font-size: 16px;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+}
+
+/* =========== BG COLORS AND CLASS HELPERS ========== */
+.bg-gradient {
+	background: linear-gradient(to right,#FFA200,#FFB300); /* gradient color left - to - right */
+}
+.bg-black {
+	background-color: #130400; 
+}
+
+/*======== HEADER ==========*/
+#menu-area{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px;
+    position:fixed;
+    width: 100%;
+    top: 0;
+    transition: background 0.5s;
+}
+#menu-area .logo img{
+    height: 80px;
+    transition: height 0.5s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#menu-area .logo{
+    padding: 20px;
+    padding-left:50px;
+}
+#menu-area ul{
+    width: 500px;
+    justify-content: space-around;
+    list-style: none;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+}
+#menu-area ul li a{
+    text-decoration: none;
+    color: #1C2A39;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/* When JavaScript actives the class */
+#menu-area.cus-nav{ 
+    background: #1C2A39;
+    border-bottom: 7px solid rgba(0,0,0,.2);
+    z-index: 9999;  
+}
+#menu-area.cus-nav a{
+    color: #fff;
+}
+#menu-area.cus-nav .logo img{
+    height: 65px;
+}
+#menu-area li > a:hover {
+    box-shadow: 0 4px 0 0 #1C2A39 !important; /*** COLOR AND THICKNESS OF THE LINE ON HOVER ***/
+    padding-bottom: 34px;
+    opacity: 1 !important;
+    transition: all .5s;
+}
+#menu-area.cus-nav a:hover{
+    box-shadow: 0 4px 0 0 #fff !important; 
+    padding-bottom: 34px;
+    opacity: 1 !important;
+    transition: all .5s;
+}
+#menu-area li li a {
+    padding-bottom: 6px !important;
+}
+#menu-area li.current-menu-item > a, .et-fixed-header #menu-area li.current-menu-item > a {
+    border: 5px solid #1C2A39; 
+    padding: 10px;
+    margin-bottom: -10px;
+    transition: all .5s;
+}
+#menu-area.cus-nav a.active{
+    box-shadow: 0 4px 0 0 #fff !important; 
+    padding-bottom: 34px;
+    opacity: 1 !important;
+    transition: all .5s;
+}
+.active{
+    box-shadow: 0 4px 0 0 #1C2A39 !important; /*** COLOR AND THICKNESS OF THE LINE ON HOVER ***/
+    padding-bottom: 34px;
+    opacity: 1 !important;
+    transition: all .5s;
+}
+/*========= BANNER ==========*/
+.banner {
+    background: url(../img/banner/notes-pexels.jpg) no-repeat fixed; /* or note-pexels image */
+    width: 100%;
+	float: left;
+	padding: 3% 4%;
+	text-align: center;
+	background-size: cover; /* aumenta a escala da imagem para caber no elemento (mantem a proporção em pixel)*/
+    background-position: center center;
+    -webkit-background-size: cover;
+    height: 100vh;
+    border-bottom: 0.7px solid #1C2A39;
+}
+.title {
+    margin-top: 20%;
+}
+.title h1 {
+    font-size: 4.2em;
+    color: #1C2A39;
+    font-family: 'fontemerienda';
+}
+.title h3{
+	padding-top: 7px; /* */
+	color: #1C2A39;
+    font-family: 'fonteopenSans';
+    font-size: 1.5em;
+}
+.learnmore{
+    margin-top: 6.8%;
+}
+.buttons {
+    width: 100%; 
+    margin-top: 2%;
+}
+.buttons i {
+	float: right;
+}
+.btn {
+	width: 100%; 
+	font-size: 1.5em; 
+	text-align: left; 
+	cursor: pointer;
+	padding: 5%; 
+}
+a.button1{
+    padding: .3em 1.2em;
+    display: inline-block;
+    margin: 3em .3em .3em 0;
+    border-radius: 2em;
+    box-sizing: border-box; /* The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+    text-decoration: none;
+    color: #fff;
+    background-color: #2C3A49;
+    text-align: center;
+    transition: all 0.2s;
+}
+a.button1 p{
+    padding: 7px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+a.button1 p i{
+    padding-left: 5px;
+}
+
+@media all and (max-width:30em){
+    a.button1{
+        display:block;
+        margin: 0.2em auto;
+    }
+}
+
+/* ========== CONTENT  ==========*/
+.wrapper{
+    text-align: center;
+    color: #1C2A39;
+}
+section{ /* setei as sections para float left, pq percebi que o banner está flutuante, assim o banner não fica por cima */
+	float: left;
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+}
+section:not(#home){ /* todo section q não for o home tem 500 px de altura VERIFICAR ISSO */
+	height: 650px;
+}
+section#concepts{
+	padding: 2% 5% 2% 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    border-bottom: 0.6px solid #cccccc;
+    text-align: center;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    float: left; 
+}
+section#html5{
+    padding: 2% 5% 2% 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    border-bottom: 0.6px solid #cccccc;
+    border-top: 0.6px solid #cccccc;
+    text-align: center;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    float: left; 
+}
+section#css3{
+    padding: 2% 5% 2% 5%;
+	line-height: 1.5; 
+    height: auto;
+    letter-spacing: 0.5px;
+    border-bottom: 0.6px solid #cccccc;
+    border-top: 0.6px solid #cccccc;
+    text-align: center;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    float: left; 
+}
+.sub-title h1{ /* same style for all sections */
+    text-transform: uppercase;
+    color: #1C2A39;
+    font-weight: 500;
+    text-align: center;
+    font-size: 2.1em; /* 32 px */
+    margin-top: 10%;
+}
+.sub-title h1 i{
+     font-size: 1.2em;
+     padding-left: 3px;
+}
+.sub-title h6{
+    color: #2C3A49;
+    text-align: center;
+    font-size: 1.2em; 
+    padding-top: 1%;
+    font-family: 'Archivo', sans-serif;
+    font-style: italic;
+}
+section#concepts h5, section#html5 h5, section#css3 h5{
+    font-size: 18px;
+    padding: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+}
+
+/* ======= SECTION CONCEPT =========== */
+section#concepts p{
+    font-size: 18px;
+    padding: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+}
+.group-article{
+    float: left;
+    text-align: center;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;                    /* FlexBox */
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+}
+.concept1{
+    width: 30%;
+    float: left;
+    background-color: #f5f5f5 !important;
+    border-radius: 8px;
+    border: 1px solid #ebebeb;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+}
+.concept2{
+    width: 30%;
+    margin: 0 auto;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ebebeb;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+}
+.concept3{
+    width: 30%;
+    float: right;
+    border-radius: 8px;
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ebebeb;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.10);
+}
+.concept1:hover, .concept2:hover, .concept3:hover{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff !important;
+ }
+
+.logo-concept i{
+    text-align: center;
+    margin: 0 auto;
+    padding:3%;
+    padding-top: 7%;
+    font-size: 5.5em;
+    transition: all 0.5s ease-in-out;
+}
+.fa-html5{
+    transition: all 0.5s ease-in-out;
+    color: #e34c26;
+}
+.fa-css3-alt{
+    transition: all 0.5s ease-in-out;
+    color: #264de4;
+}
+.fa-js{
+    transition: all 0.5s ease-in-out;
+    color: #f0db4f;
+}
+.fa-html5:hover{
+    transition: all 0.5s ease-in-out;
+    color: rgba(0, 0, 0, 0.5);
+}
+.fa-css3-alt:hover{
+    transition: all 0.5s ease-in-out;
+    color: rgba(0, 0, 0, 0.5);
+}
+.fa-js:hover{
+    transition: all 0.5s ease-in-out;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.logo-concept h6{
+    padding: 2%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+.concept1 h6{
+    color: #e34c26;
+}
+.concept2 h6{
+    color: #264de4;
+}
+.concept3 h6{
+    color: #f0db4f;
+}
+section#concepts p#p1, section#concepts p#p2, section#concepts p#p3{
+    text-align: justify;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 300;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* ========= SECTION HTML5 ==========*/
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px solid green; */
+  }
+/* (gets the article-group flex box) */
+.col-icon{
+    width: 20%;
+    float: left;
+    text-align: center;
+    color: #c5c5c5;
+    text-align: center;
+    font-size: 4em;
+    transition: all 0.3s ease-in-out;
+}
+.col-icon i:hover{
+    transition: all 0.5s ease-in-out;
+    color: #1C2A39;
+    cursor: pointer;
+}
+.col-question{
+    width: 30%;
+    float: left;
+}
+.col-question h2{
+    font-size: 1.6em;
+    color: #1C2A39;
+    font-style: italic;
+}
+.col-text{
+    width: 40%;
+    float: left;
+    text-align: justify;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.col-text p{
+    text-align: justify;
+    font-size: 18px;
+    color: #1C2A39;
+}
+.col-text p span{
+    font-weight: bold;
+}
+.html-5{
+    padding-bottom: 2%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out !important;
+    background-color: #f5f5f5;
+}
+div .group-article img{
+    max-height:230px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid rgb(17, 72, 129);
+    transition: all 0.5s ease-in-out;
+}
+div .group-article img:hover{
+    opacity: 0.9;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.codespan {
+    color: crimson;
+    background-color: #f1f1f1;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-style: italic;
+    font-weight: bold;
+}
+/* ========= SECTION CSS3 ==========*/
+.css-content{
+    width: 100%;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.3em;
+    color: #1C2A39;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    font-size: 1em;
+    color: #1C2A39;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent; 
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+}
+.css-subtitle h1{
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+}
+.css-content-2{
+    text-align: left;
+    font-size: 1.3em;
+    color: #1C2A39;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    padding: 3%;
+}
+.css-content-2 span{
+    font-size: 18px;
+}
+.side1{
+    width: 48%;
+    float: left;
+    border-radius: 10px;
+    padding: 2%;
+}
+.side2{
+    width: 48%;
+    float: right;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+
+/* ========= BANNERS ==========*/
+div#banner1{
+    clear: both;
+	background: url(../img/banner/2.jpg) no-repeat fixed;
+	height: 450px; 
+	background-size: cover;
+	float: left;
+	background-size: 100% auto;
+	background-position: center;  
+	width: 100% !important;
+}
+div#banner2{
+    clear: both;
+	background: url(../img/banner/6.jpg) no-repeat fixed;
+	height: 450px; 
+	background-size: cover;
+	float: left;
+	background-size: 100% auto;
+	background-position: center;  
+	width: 100% !important;
+}
+/* ========== FOOTER  ==========*/
+
+footer{
+    height: auto;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: #2C3A49;
+    position: static;
+    justify-content: center;
+    align-items: center;
+    float: left; 
+}
+footer h5{
+    font-weight: bold;
+    line-height: 1.5em;
+    padding-bottom: 10px;
+    font-size: 21px;
+}
+footer p{
+    font-size: 18px;
+}
+.footer-above{
+    text-align: center;
+    padding: 2%;
+    width: 100%;                    /* FlexBox */
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+}
+.col-1{
+    width: 30%;
+    float: left;
+} 
+.col-2{
+    width: 30%;
+    margin: 0 auto;
+    display: inline-block;
+}
+.col-3{
+    width: 30%;
+    float: right;
+}
+.footer-below{
+    padding: 1%;
+    text-align: center;
+    background-color: #1C2A39;
+    color: #fff;
+    font-weight: bold;
+}
+.social-media{
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+    display: flex;                  /* establish flex container */
+    flex-direction: row;            /* default value; can be omitted */
+    flex-wrap: nowrap;              /* default value; can be omitted */
+    justify-content: space-between; /* switched from default (flex-start, see below) */
+    transition: all .3s ease-out;
+}
+.button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,.1);
+    transition: all .3s ease-out;
+}
+.button .icon .fa-facebook-f:hover{
+    color: #3b5998;
+    transition: all .3s ease-out;
+}
+.button .icon .fa-twitter:hover{
+    color: #1da1f2;
+    transition: all .3s ease-out;
+}
+.button .icon .fa-instagram:hover{
+    color: #3f729b;
+    transition: all .3s ease-out;
+}
+.button .icon .fa-whatsapp:hover{
+    color: #25D366;
+    transition: all .3s ease-out;
+}
+.button .icon .fa-youtube:hover{
+    color: #FF0000;
+    transition: all .3s ease-out;
+}
+.button .icon{
+    display: inline-block;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all .3s ease-out;
+}
+.button .icon i{
+    font-size: 28px;
+    line-height: 60px;
+    color: #1C2A39;
+    transition: all .3s ease-out;
+}
+
+
+/* ------ SCROLL BAR -----*/
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+}
+@media screen and (max-width:640px) {
+    ::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    }
+    ::-webkit-scrollbar {
+    width: 6px;
+    background: #f5f5f5;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color:#cfd8dc;
+    }
+}

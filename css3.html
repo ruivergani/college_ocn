@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="author" content="Rui Vergani Neto">
+    <meta name="robots" content="index, follow">
+    <title>HTML & CSS | Design and Build Websites</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- Fonts (fontawesome lastest version and Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="./fonts/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="icon" href="./img/icons/icon-pc.png">
+
+    <!-- Just for Internet explore purposes -->
+     <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+
+     <style>
+        .conteudo {
+            width: 100%;
+            float: left;
+            padding: 3% 4%;
+            text-align: center;
+            background-size: cover; /* aumenta a escala da imagem para caber no elemento (mantem a proporção em pixel)*/
+            background-position: center center;
+            -webkit-background-size: cover;
+            font-family: 'Archivo', sans-serif;
+            font-size: 18px;
+            border-bottom: 0.7px solid #1C2A39;
+            color:#1C2A39;
+        }
+        div#group-article2{
+            float: left;
+            text-align: center;
+            margin-top: 6%;
+            margin-bottom: 7%;
+            width: 100%;                    /* FlexBox */
+            display: flex;                  /* establish flex container */
+            flex-direction: row;            /* default value; can be omitted */
+            flex-wrap: nowrap;              /* default value; can be omitted */
+            justify-content: space-between; /* switched from default (flex-start, see below) */
+        }
+        div#group-article3{
+            float: left;
+            text-align: center;
+            margin-top: 6%;
+            margin-bottom: 7%;
+            width: 100%;                    /* FlexBox */
+            display: flex;                  /* establish flex container */
+            flex-direction: row;            /* default value; can be omitted */
+            flex-wrap: nowrap;              /* default value; can be omitted */
+            justify-content: space-between; /* switched from default (flex-start, see below) */
+        }
+        .coluna1{
+            width: 50%;
+            padding: 2%;
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #f4f4f4;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .coluna2{
+            width: 50%;
+            float: left;
+            padding: 2%;
+            border: 1px solid #f4f4f4;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .coluna3{
+            width: 100%;
+            float: left;
+            padding: 2%;
+            border: 1px solid #f4f4f4;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+            text-align: justify;
+        }
+        .coluna2 p, .coluna1 p, .coluna3 p{
+            padding-top: 3%;
+            font-family: 'Archivo', sans-serif;
+            font-size: 18px;
+            text-align: justify;
+            line-height: 1.6em;
+        }
+        .sub-title2 h3{
+            font-size: 21px;
+            font-weight: bold;
+            font-style: italic;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            text-align: center;
+        }
+        .codespan {
+            color: crimson;
+            background-color: #f0f0f0;
+            padding-left: 4px;
+            padding-right: 4px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        div .imagem img{
+            margin-top: 30px;
+            width: 90%;
+            padding: 3px;
+            border-radius: 5px;
+            border: 1px solid #2C3A49;
+        }
+     </style>
+</head>
+<body>
+
+    <!-- HEADER --> 
+    <header>
+        <div id="menu-area" class="menu cus-nav">
+            <div id="logo-area">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./img/logos/logo.png"  id="myImage" alt="">
+                    </a>
+                </div>
+            </div>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Concepts</a></li>
+                <li><a href="html5.html">HTML5</a></li>
+                <li><a href="css3.html" class="active">CSS3</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                
+            </ul>
+        </div>
+    </header>
+<!-- END HEADER -->
+
+    <div class="conteudo">
+        <div class="sub-title">
+            <h1> CSS <i class="fab fa-css3-alt"></i></h1>
+            <hr style="width: 15%; height:0.7px; border:none; background-color:#2C3A49; margin: 8px auto 0px auto;"/>
+            <h6>Hierarchical Styles and CSS selectors</h6>
+        </div>
+
+        <div id="group-article2">
+            <div class="coluna1">
+                <div class="sub-title2">
+                    <h3>Hierarchical Styles</h3>
+                </div>
+                <p>
+                    &bull; Specificity is connected with Hierarchical Styles; <br><br>
+                    &bull; If there are two or more conflicting CSS rules that point to the same element, the browser follows some rules to determine which one is most specific and therefore wins out;<br><br>
+                    &bull; Think of specificity as a score/rank that determines which style declarations are ultimately applied to an element;
+                    <br><br>
+                    &bull; The universal selector (*) has low specificity, while ID selectors are highly specific.
+                </p>
+                <div class="imagem">
+                    <img src="./img/css-screen.png" alt="html markup">
+                </div>
+            </div>
+
+            <div class="coluna2">
+                <div class="sub-title2">
+                    <h3>CSS Selectors</h3>
+                </div>
+                <p>
+                    <span>&bull; </span> <code class="codespan">color</code>: property defines the text color to be used; <br>
+                    <span>&bull; </span> <code class="codespan">font-family</code>: property defines the font to be used; <br>
+                    <span>&bull; </span> <code class="codespan">font-size</code>: property defines the text size to be used; <br>
+                    <span>&bull; </span> <code class="codespan">border</code>: property defines a border around an HTML element; <br>
+                    <span>&bull; </span> <code class="codespan">padding</code>: property defines a padding (space) between the text and the border; <br>
+                    <span>&bull; </span> <code class="codespan">margin</code>: property defines a margin (space) outside the border. <br>
+                </p>
+            </div>
+        </div>
+
+        <div id="group-article3">
+            <div class="coluna3">
+                <div class="sub-title2">
+                    <h3>More about Hierarchical Styles..</h3>
+                </div>
+                <p>
+                    &bull; Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector: <br><br>
+
+                    &bull; Inline styles - An inline style is attached directly to the element to be styled. Example: &lt;h1 style="color: #ffffff;"&gt;. <br><br>
+
+                    &bull; IDs - An ID is a unique identifier for the page elements, such as #navbar.<br><br>
+
+                    &bull; Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.<br><br>
+
+                    &bull; Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.<br><br>
+                </p>
+            
+            </div>
+
+        </div>
+
+</div>
+<!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-above">
+            <div class="col-1">
+                <h5>Location</h5>
+                <p>London, United Kingdom
+                <br>Whitlock Drive, SW196SN</p>
+            </div>
+            <div class="col-2">
+                <h5>Access to the Social Media</h5>
+                <div class="social-media">
+                    <div class="button">
+                        <div class="icon" id="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h5>About Development </h5>
+                <p> Approved by GTIC - Information and Communication Technology Management.</p>
+            </div>
+        </div>
+
+        <div class="footer-below">
+            Copyright &copy; College OCN. Website 2018
+        </div>
+    </footer>
+<!-- END FOOTER-->
+
+ 
+</body>
+</html>

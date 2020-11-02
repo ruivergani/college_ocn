@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content=" ">
+    <meta name="author" content="Rui Vergani Neto">
+    <meta name="robots" content="index, follow">
+    <title>HTML & CSS | Design and Build Websites</title>
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- Fonts (fontawesome lastest version and Icons -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="./fonts/fontawesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="icon" href="./img/icons/icon-pc.png">
+
+    <!-- Just for Internet explore purposes -->
+     <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+
+     <style>
+         .conteudo {
+            width: 100%;
+            float: left;
+            padding: 3% 4%;
+            text-align: center;
+            background-size: cover; /* aumenta a escala da imagem para caber no elemento (mantem a proporção em pixel)*/
+            background-position: center center;
+            -webkit-background-size: cover;
+            font-family: 'Archivo', sans-serif;
+            font-size: 18px;
+            border-bottom: 0.7px solid #1C2A39;
+            color:#1C2A39;
+            line-height: 1.6em;
+        }
+        div#group-article2{
+            float: left;
+            text-align: center;
+            margin-top: 6%;
+            margin-bottom: 7%;
+            width: 100%;                    /* FlexBox */
+            display: flex;                  /* establish flex container */
+            flex-direction: row;            /* default value; can be omitted */
+            flex-wrap: nowrap;              /* default value; can be omitted */
+            justify-content: space-between; /* switched from default (flex-start, see below) */
+        }
+        .coluna1{
+            width: 50%;
+            padding: 2%;
+            float: left;
+            margin-right: 10px;
+            border: 1px solid #f4f4f4;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .coluna2{
+            width: 50%;
+            float: left;
+            padding: 2%;
+            border: 1px solid #f4f4f4;
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        .sub-title2 h3{
+            font-size: 21px;
+            font-weight: bold;
+            font-style: italic;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .sub-title2 h2{
+            font-size: 1.7em;
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 10px;
+            text-decoration: dotted;
+            padding-top: 10px;
+        }
+        .coluna1 p, .coluna2 p{
+            font-family: 'Archivo', sans-serif;
+            text-align: justify;
+            font-size: 18px;
+            padding-top: 3%;
+            line-height: 1.6em;
+        }
+        div#structure{
+            text-align: justify;
+            
+        }
+        div#page{
+            margin-top: 50px;
+            border-radius: 5px;
+            margin: 4%;
+        }
+        div .imagem img{
+            padding-top: 20px;
+            width: 80%;
+        }
+     </style>
+</head>
+<body>
+
+    <!-- HEADER --> 
+    <header>
+        <div id="menu-area" class="menu cus-nav">
+            <div id="logo-area">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./img/logos/logo.png"  id="myImage" alt="">
+                    </a>
+                </div>
+            </div>
+            <ul class="navbar">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="index.html">Concepts</a></li>
+                <li><a href="html5.html" class="active">HTML5</a></li>
+                <li><a href="css3.html">CSS3</a></li>
+                <li><a href="javascript.html">JavaScript</a></li>
+                
+            </ul>
+        </div>
+    </header>
+<!-- END HEADER -->
+
+<!-- INICIO CONTEUDO -->
+    <div class="conteudo">
+        <div class="sub-title">
+            <h1> HTML <i class="fab fa-html5"></i></h1>
+            <hr style="width: 15%; height:0.7px; border:none; background-color:#2C3A49; margin: 8px auto 0px auto;"/>
+            <h6>Purpose of separating the content from formatting</h6>
+        </div>
+
+        <div id="group-article2">
+            <div class="coluna1">
+                <div class="sub-title2">
+                    <h3>Content</h3>
+                </div>
+                <p>
+                    &bull; The reason to separate content from the rest of the page is
+                    simple: to simplify any change from a slight design adjustment to a
+                    full-fledged redesign. Isolation of content
+                    makes adding or updating things easy while maintaining presentational
+                    consistency throughout the site.
+                </p>
+                <div class="imagem">
+                    <img src="./img/html-markup.png" alt="html markup">
+                </div>
+            </div>
+
+            <div class="coluna2">
+                <div class="sub-title2">
+                    <h3>Structure</h3>
+                </div>
+                <p>
+                    &bull; Here’s where things get sticky. First of all, what is
+                    structure? We could describe structure as everything that makes up
+                    a page, minus presentational elements and content. However,
+                    this is at best an overly simplified definition that could easily
+                    cause undue confusion.
+                    <br> <br>
+                    &bull; Take the navigation menus on ALA as an example:
+                    <br>
+                        Change a color here, a border thickness there, and you have a
+                        change in presentation.
+                         Change the text of the first navigation item from “Up
+                        front” to “Home”, and you have a change in
+                        content.
+
+                    <br> <br>
+                    &bull; Lastly, you have the &lt;div id=“menu”&gt;,
+                    &lt;ul&gt;, and &lt;li id=”…”&gt; tags
+                    as the structure. Switch those out with an antique row of table cells,
+                    and you have a change in structure.
+                </p>
+            </div>
+        </div>
+
+        <div id="structure">
+            <div class="sub-title2">
+                <h2>HTML Page Structure:</h2>
+            </div>
+
+            <div style="border:1px solid #2C3A49;padding:8px;background-color:#f5f5f5" id="page">
+                &lt;html&gt;
+                <div style="width:90%;border:1px solid #2C3A49;padding:3px;margin:20px">
+                    &lt;head&gt;
+                    <div style="width:90%;border:1px solid #2C3A49;padding:5px;margin:20px">
+                        &lt;title&gt;Page title&lt;/title&gt;
+                    </div>
+                    &lt;/head&gt;
+                </div>
+                <div style="width:90%;border:1px solid #2C3A49;padding:3px;margin:20px;background-color:#f5f5f5">
+                    &lt;body&gt;
+                        <div style="width:90%;border:1px solid #2C3A49;padding:3px;margin:20px;background-color:#fff">
+                            <div style="width:90%;border:1px solid #2C3A49;padding:5px;margin:20px">&lt;h1&gt;This is a heading&lt;/h1&gt;</div>
+                            <div style="width:90%;border:1px solid #2C3A49;padding:5px;margin:20px">&lt;p&gt;This is a paragraph.&lt;/p&gt;</div>
+                            <div style="width:90%;border:1px solid #2C3A49;padding:5px;margin:20px">&lt;p&gt;This is another paragraph.&lt;/p&gt;</div>
+                        </div>
+                    &lt;/body&gt;
+                </div>
+                &lt;/html&gt;
+            </div>
+        </div>
+    </div>
+<!-- END CONTEUDO -->
+
+
+<!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-above">
+            <div class="col-1">
+                <h5>Location</h5>
+                <p>London, United Kingdom
+                <br>Whitlock Drive, SW196SN</p>
+            </div>
+            <div class="col-2">
+                <h5>Access to the Social Media</h5>
+                <div class="social-media">
+                    <div class="button">
+                        <div class="icon" id="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <h5>About Development </h5>
+                <p> Approved by GTIC - Information and Communication Technology Management.</p>
+            </div>
+        </div>
+
+        <div class="footer-below">
+            Copyright &copy; College OCN. Website 2018
+        </div>
+    </footer>
+<!-- END FOOTER-->
+
+ 
+</body>
+</html>

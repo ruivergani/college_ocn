@@ -25,15 +25,109 @@
      
 
      <style>
-         .loading{
-             padding-top: 30%;
-             padding-bottom: 25%;
-             text-align: center;
-         }
-         .loading i{
-             font-size: 5em;
-         }
-     </style>
+        .conteudo {
+           width: 100%;
+           float: left;
+           padding: 3% 4%;
+           text-align: center;
+           background-size: cover; /* bigger scale of image, fits the proportion. */
+           background-position: center center;
+           -webkit-background-size: cover;
+           font-family: 'Archivo', sans-serif;
+           font-size: 18px;
+           border-bottom: 0.7px solid #1C2A39;
+           color:#1C2A39;
+           line-height: 1.6em;
+       }
+       div#group-article2{
+           float: left;
+           text-align: center;
+           margin-top: 6%;
+           margin-bottom: 7%;
+           width: 100%;                    /* FlexBox */
+           display: flex;                  /* establish flex container */
+           flex-direction: row;            /* default value; can be omitted */
+           flex-wrap: nowrap;              /* default value; can be omitted */
+           justify-content: space-between; /* switched from default (flex-start, see below) */
+       }
+       .coluna1{
+           width: 50%;
+           padding: 2%;
+           float: left;
+           margin-right: 10px;
+           border: 1px solid #f4f4f4;
+           border-radius: 10px;
+           background-color: #f5f5f5;
+       }
+       .coluna2{
+           width: 50%;
+           float: left;
+           padding: 2%;
+           border: 1px solid #f4f4f4;
+           border-radius: 10px;
+           background-color: #f5f5f5;
+       }
+       .sub-title2 h3{
+           font-size: 21px;
+           font-weight: bold;
+           font-style: italic;
+           padding-bottom: 10px;
+           padding-top: 10px;
+       }
+       .sub-title2 h2{
+           font-size: 1.7em;
+           font-weight: bold;
+           text-align: center;
+           padding-bottom: 10px;
+           text-decoration: dotted;
+           padding-top: 10px;
+       }
+       .coluna1 p, .coluna2 p{
+           font-family: 'Archivo', sans-serif;
+           text-align: justify;
+           font-size: 18px;
+           padding-top: 3%;
+           line-height: 1.6em;
+       }
+       div .javascriptlight{
+           clear: both;
+           padding-top: 6%;
+       }
+       div .javascriptlight img{
+           position: relative;
+       }
+       div .javascriptlight button{
+           border: 1px solid black;
+           border-radius: 5px;
+           padding: 5px;
+           cursor: pointer;
+           appearance: button;
+            -webkit-writing-mode: horizontal-tb !important;
+            text-rendering: auto;
+            color: -internal-light-dark(black, white);
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: center;
+            align-items: flex-start;
+            background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+            box-sizing: border-box;
+            margin: 0em;
+            border-width: 2px;
+            border-style: outset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+            border-image: initial;
+            transition: all 0.5s ease-in-out;
+       }
+       div .javascriptlight button:hover{
+           background-color:rgb(118, 118, 118);
+           color: #fff;
+           transition: all 0.5s ease-in-out;
+       }
+    </style>
 </head>
 <body>
 
@@ -61,11 +155,63 @@
 
 
 
-<!-- LOADING SECTION -->
-<div class="loading">
-    <i class="fas fa-spinner fa-lg"></i>
+
+<!-- BEGIN CONTENT -->
+<div class="conteudo">
+    <div class="sub-title">
+        <h1> JAVASCRIPT <i class="fab fa-js"></i></h1>
+        <hr style="width: 15%; height:0.7px; border:none; background-color:#2C3A49; margin: 8px auto 0px auto;"/>
+        <h6>World's most popular programming language.</h6>
+    </div>
+
+    <div id="group-article2">
+        <div class="coluna1">
+            <div class="sub-title2">
+                <h3>Why Study JavaScript?</h3>
+            </div>
+            <p>
+                JavaScript is one of the 3 languages all web developers must learn:
+                <br><br>
+                    1. HTML to define the content of web pages
+                <br>
+                    2. CSS to specify the layout of web pages
+                <br>
+                    3. JavaScript to program the behavior of web pages
+
+                <br><br>
+                Did You Know? <br> <br>
+                &bull; JavaScript and Java are completely different languages, both in concept and design.
+                <br>
+                &bull; JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997.
+                <br>
+                &bull; ECMA-262 is the official name of the standard. ECMAScript is the official name of the language.
+            </p>
+            <div class="imagem">
+               
+            </div>
+        </div>
+
+        <div class="coluna2">
+            <div class="sub-title2">
+                <h3>What Can JavaScript Do?</h3>
+            </div>
+            <p>
+                JavaScript can change HTML attribute values.
+                In this case JavaScript changes the value of the src (source) attribute of an image.
+
+                <div class="javascriptlight">
+                    <button onclick="document.getElementById('myImage10').src='./img/pic_bulbon.gif'">Turn on the light</button>
+                    
+                    <img id="myImage10" src="./img/pic_bulboff.gif" style="width:100px">
+
+                    <button onclick="document.getElementById('myImage10').src='./img/pic_bulboff.gif'">Turn off the light</button>
+                </div>
+                
+            </p>
+        </div>
+    </div>
 </div>
-<!-- END LOADING SECTION -->
+<!-- END CONTEUDO -->
 
 
 

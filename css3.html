@@ -108,6 +108,14 @@
             font-weight: bold;
             font-size: 18px;
         }
+        .codespan2 {
+            color: green;
+            background-color: #f1f1f1;
+            padding-left: 4px;
+            padding-right: 4px;
+            font-style: italic;
+            font-weight: bold;
+        }
         div .imagem img{
             margin-top: 30px;
             width: 90%;
@@ -134,7 +142,7 @@
                 <li><a href="index.html">Concepts</a></li>
                 <li><a href="html5.html">HTML5</a></li>
                 <li><a href="css3.html" class="active">CSS3</a></li>
-                <!-- <li><a href="javascript.html">JavaScript</a></li> -->
+                <li><a href="javascript.html">JavaScript</a></li>
                 
             </ul>
         </div>
@@ -188,13 +196,16 @@
                 <p>
                     &bull; Every selector has its place in the specificity hierarchy. There are four categories which define the specificity level of a selector: <br><br>
 
-                    &bull; Inline styles - An inline style is attached directly to the element to be styled. Example: &lt;h1 style="color: #ffffff;"&gt;. <br><br>
+                    &bull; Inline styles - An inline style is attached directly to the element to be styled. Example: &lt;h1 style="<code class="codespan">color</code>: #ffffff;"&gt;. <br><br>
 
-                    &bull; IDs - An ID is a unique identifier for the page elements, such as #navbar.<br><br>
+                    &bull; IDs - An ID is a unique identifier for the page elements, such as <code class="codespan2">#navbar</code>.<br><br>
 
-                    &bull; Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as :hover, :focus etc.<br><br>
+                    &bull; Classes, attributes and pseudo-classes - This category includes .classes, [attributes] and pseudo-classes such as <code class="codespan2">:hover</code>, <code class="codespan2">:focus</code> etc.<br><br>
 
-                    &bull; Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, :before and :after.<br><br>
+                    &bull; Elements and pseudo-elements - This category includes element names and pseudo-elements, such as h1, div, <code class="codespan2">:before</code> and <code class="codespan2">:after</code>.<br><br>
+
+                    &bull; The main ideia is that sometimes you need to be specific to make an style and you will write the whole path connected to the element that you want to change. For example:<code class="codespan2">#a .c p h1{}</code>. As you can imagine the code we want to specify in this case is <code class="codespan">h1</code>. <br><br>
+
                 </p>
             
             </div>
